@@ -18,6 +18,6 @@ app.get("/donate", (req, res) => {
   res.render("donate", {bot: settings.website })
 })
 
-const listener = server.listen(80, function() {
+const listener = server.listen(function() {
     console.log("Your app is listening on port " + listener.address().port);
 })
