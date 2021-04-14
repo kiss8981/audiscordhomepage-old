@@ -62,6 +62,15 @@ form.d-flex button:hover {
     padding-top: 20rem!important;
 }
 
+.align-self-start {
+    text-align: left;
+}
+
+.list-unstyled {
+    text-align: left;
+    color: white;
+}
+
 .custom-1 img {
   height: 269px;
   width: 510px;
@@ -74,9 +83,37 @@ form.d-flex button:hover {
     padding-top: 60px;
 }
 
+.text-center {
+    text-align: center;
+}
+
+.shadow-sm {
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.Footer_Footer_Main {
+    padding-top: 30px;
+    background-color: #36393f;
+    padding-bottom: 20px;
+    font-weight: bolder;
+}
 .custom-1 p {
     color: rgb(255, 255, 255, .55);
     width: 40%;
+}
+
+.card-body {
+    background-color: #212529;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.kakao_ad_area {
+    margin-top: 60px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 60px;
 }
 
 .custom-2 img {
