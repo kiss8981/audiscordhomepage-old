@@ -7,8 +7,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "predeploy": "npm run start"
-    "deploy": "gh-pages -d build"
+    "predeploy": "npm run start",
+    "deploy": "gh-pages -d build",
     "start": "node index.js"
   },
   "keywords": [],
