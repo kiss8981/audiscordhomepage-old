@@ -1,14 +1,9 @@
 {
-  "homepage": "https://kiss8981.github.io/audiscordhomepage/"
-}
-{
   "name": "dashboard",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "predeploy": "npm run start",
-    "deploy": "gh-pages -d build",
     "start": "node index.js"
   },
   "keywords": [],
