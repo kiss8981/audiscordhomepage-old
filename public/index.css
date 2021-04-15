@@ -7,8 +7,21 @@ body {
 .navbar-brand img {
     border-radius: 20px;
 }
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #36393f;
+    box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    z-index: 10;
+}
+
+
+
 .accordion-body {
-    color: black;
+    color: white;
 }
 
 form.d-flex button {
@@ -100,7 +113,21 @@ form.d-flex button:hover {
     background-color: #36393f;
     padding-bottom: 20px;
     font-weight: bolder;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 1), 0 6px 20px 0 rgba(0, 0, 0, 1);
 }
+
+
+.Footer_Footer_Main, li a:visited {
+    color: white !important;
+    text-decoration: none;
+    font-weight: normal;
+}
+
+.Footer_Footer_Main, li a:link {
+    color: white !important;
+    text-decoration: none;
+}
+
 .custom-1 p {
     color: rgb(255, 255, 255, .55);
     width: 40%;

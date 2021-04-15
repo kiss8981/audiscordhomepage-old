@@ -23,5 +23,9 @@ app.get("/privacy", (req, res) => {
   res.render("privacy", {bot: settings.website })
 })
 
+app.get("/status", (req, res) => {
+  res.render("status", {bot: settings.website })
+})
+
 const listener = server.listen(8080, function() {
     console.log("Your app is listening on port " + listener.address().port);})
