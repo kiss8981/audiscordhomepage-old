@@ -27,5 +27,10 @@ app.get("/status", (req, res) => {
   res.render("status", {bot: settings.website })
 })
 
+app.get('/sitemap.xml', function(req, res) {
+  res.sendFile('C:/Users/Administrator/Downloads/Discord-Bot-Dashboard-main/Discord-Bot-Dashboard-main/views/sitemap.xml');
+});
+  
+
 const listener = server.listen(8080, function() {
     console.log("Your app is listening on port " + listener.address().port);})
