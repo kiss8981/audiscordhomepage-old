@@ -14,7 +14,7 @@
                     명령어</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="<%= bot.invite %>">
+                    <a class="nav-link" href="" onclick="invite();">
                     초대</a>
                 </li>
                 <li class="nav-item">
@@ -33,3 +33,11 @@
         </div>
     </div>
 </nav>
+
+
+
+<script>
+    function invite() {
+        window.open('https://discord.com/api/oauth2/authorize?client_id=775351568396320799&permissions=8&scope=bot','pop1','width=400,height=650,location=no,status=no');
+    }
+</script>

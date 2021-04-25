@@ -19,7 +19,9 @@ body {
     backdrop-filter: blur(15px);
 }
 
-
+html {
+    -webkit-overflow-scrolling : touch;
+}
 
 .accordion-body {
     color: white;
