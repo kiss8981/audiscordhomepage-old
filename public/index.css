@@ -13,15 +13,12 @@ body {
     top: 0;
     left: 0;
     right: 0;
-    background-color: rgba(54,57,63,0.3);
+    background-color: rgba(54,57,63,1);
     box-shadow: 0 10px 5px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     z-index: 10;
-    backdrop-filter: blur(15px);
 }
 
-html {
-    -webkit-overflow-scrolling : touch;
-}
+
 
 .accordion-body {
     color: white;
