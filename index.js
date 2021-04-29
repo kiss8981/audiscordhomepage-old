@@ -1,9 +1,22 @@
 const http = require("http");
 const settings = require("./settings.json");
 const express = require("express");
+const mongoose = require('mongoose');
 const app = express();
 const server = http.createServer(app);
 const port = process.env.PORT;
+
+var autojindan = require('./models/autojindanDB');
+var warning = require('./models/warningDB');
+
+mongoose
+  .connect("mongodb://loclhost:27017/test", {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  })
+  .then(() => console.log("DB연결완료"))
+  .catch((err) => console.log(err));
+
 app.set('view engine', 'ejs');
 app.use(express.static("public"));
 
@@ -29,6 +42,36 @@ app.get("/status", (req, res) => {
 
 app.get('/sitemap.xml', function(req, res) {
   res.sendFile('C:/Users/Administrator/Downloads/Discord-Bot-Dashboard-main/Discord-Bot-Dashboard-main/views/sitemap.xml');
+});
+
+app.get('/api/autojindandb', function(req,res){
+  autojindan.find(function(err, books){
+      if(err) return res.status(500).send({error: 'database failure'});
+      res.json(books);
+  })
+});
+
+app.get('/api/warning', function(req,res){
+  warning.find(function(err, warning){
+      if(err) return res.status(500).send({error: 'database failure'});
+      res.json(warning);
+  })
+});
+
+app.get('/api/warning/:guild_id', function(req, res){
+  warning.find({guild_id: req.params.guild_id}, function(err, warning){
+      if(err) return res.status(500).json({error: err});
+      if(!warning) return res.status(404).json({error: 'Not Found'});
+      if(warning == '' || null || undefined || 0 || NaN){
+        res.status(404).json({'error': '실패', 'info': '아무 정보를 찾지 못하였습니다'})
+      } else {
+      res.status(202).json({'success': '성공','info': warning});
+      }
+  })
+});
+
+app.get('*', function(req, res){
+  res.render("NotFound", {bot: settings.website })
 });
 
 
